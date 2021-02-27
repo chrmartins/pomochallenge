@@ -23,7 +23,7 @@ export function CountdownPovider({ children }: CountdownPoviderProps) {
 
   const { startNewChallenge } = useContext(ChallengesContext);
 
-  const [time, setTime] = useState(0.1 * 60)
+  const [time, setTime] = useState(25 * 60)
   const [isActive, setIsActive] = useState(false)
   const [hasFineshed, setHasFineshed] = useState(false)
 
@@ -38,7 +38,7 @@ export function CountdownPovider({ children }: CountdownPoviderProps) {
     clearTimeout(countdownTimeout)
     setIsActive(false)
     setHasFineshed(false)
-    setTime(0.1 * 60)
+    setTime(25 * 60)
   }
 
   useEffect(() => {
